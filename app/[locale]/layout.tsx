@@ -1,5 +1,6 @@
 import { locales, isValidLocale, type Locale } from '@/lib/i18n';
 import { notFound } from 'next/navigation';
+import HtmlAttributes from '@/components/HtmlAttributes';
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -17,5 +18,10 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
     notFound();
   }
 
-  return children;
+  return (
+    <>
+      <HtmlAttributes locale={locale as Locale} />
+      {children}
+    </>
+  );
 }
