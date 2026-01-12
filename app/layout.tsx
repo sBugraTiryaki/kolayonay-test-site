@@ -29,13 +29,10 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
-        {/* KolayOnay Banner Script - TOKEN'i KolayOnay'dan aldiginizda buraya ekleyin */}
-        {/*
         <Script
-          src="https://verify.kolayonay.com.tr/s/{TOKEN}"
+          src="https://verify.kolayonay.com.tr/s/2TyOnCMTtWAmloTELx7LRQFycttcQZ5y"
           strategy="afterInteractive"
         />
-        */}
       </body>
     </html>
   );
